@@ -1,0 +1,64 @@
+@use "../../../assets/scss/var";
+
+.carousel {
+  &-inner {
+    height: 700px;
+    & .carousel-item img {
+      height: 700px;
+      object-fit: cover;
+    }
+  }
+  &-caption {
+    & h2 {
+      color: var.$primaryColor;
+      font-weight: bold;
+      font-size: 30px;
+    }
+    & p {
+      color: #ffffff;
+    }
+  }
+}
+
+.poster {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  &__image {
+    max-height: 100px;
+    object-fit: contain;
+    // width: 100%;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 7px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.09);
+    }
+    &--lg {
+      max-height: 300px;
+    }
+  }
+  /* width */
+  &::-webkit-scrollbar {
+    width: 3px;
+    display: none;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

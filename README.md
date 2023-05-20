@@ -1,4 +1,4 @@
-# Getting start
+# 🔌 Getting start
 1. Make sure that you have [Node](https://nodejs.org/) on your machine (**LTS is recommended**)
 2. First you need to install dependencies by using following command:
 ```shell
@@ -12,7 +12,11 @@ yarn
 
 pnpm install
 ```
-3. To run the app on development mode, you can use commands below:
+3. This app needs an API Key from this [**website** (sign up)](https://www.themoviedb.org/signup), please sign up and use your own API Key. For doing this, you need
+   to change the [.env.example](./.env.example) to `.env` and put you API Key in the `NG_APP_API_KEY`.
+
+
+4. To run the app on development mode, you can use one of the commands below:
 ```shell
 npm start
 
@@ -24,6 +28,12 @@ yarn start
 
 pnpm start
 ```
+---
+## 📝 Change Log
+In the [change-log.md](./change-log.md) you can find the all information about the creation cycle. By click
+on the file name, you will redirect to that file to see the structure of that file.
+
+---
 ### 🚩 NVM
 On Mac OS or Linux, you can use command below to install the exact node version which is used to create this app.
 ```shell

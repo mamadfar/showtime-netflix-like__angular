@@ -1,0 +1,10 @@
+<section class="container mt-3 p-3">
+  <div class="row flex-column">
+    <h5 class="text-white">{{section_name}}</h5>
+    <div class="poster mt-3 p-2">
+      <ng-container *ngFor="let movie of movies_list">
+        <app-image [id]="movie.id.toString()" [class]="'poster__image poster__image--lg'" [title]="movie.original_title" [image_url]="movie.poster_path"></app-image>
+      </ng-container>
+    </div>
+  </div>
+</section>
