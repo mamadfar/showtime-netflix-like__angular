@@ -1,0 +1,11 @@
+@use "../../../assets/scss/var";
+
+button {
+  background-color: var.$primaryColor;
+  color: #ffffff;
+  transition: color 0.3s, background-color 0.3s;
+  &:hover {
+    background-color: #ffffff;
+    color: var.$primaryColor;
+  }
+}

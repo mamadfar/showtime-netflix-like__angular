@@ -1,13 +1,13 @@
 <!-- Banner 👇 -->
 
-<div class="container-fluid">
+<section class="container-fluid">
   <div id="carouselExampleDark" class="carousel carousel-dark slide">
     <div class="carousel-inner">
-      <div class="carousel-item" data-bs-interval="10000" *ngFor="let banner of banners; let index=index"
+      <article class="carousel-item" data-bs-interval="10000" *ngFor="let banner of banners; let index=index"
            [ngClass]="{active: index===1}">
         <app-banner [backdrop_path]="banner.backdrop_path" [original_title]="banner.original_title"
                     [overview]="banner.overview"></app-banner>
-      </div>
+      </article>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -18,7 +18,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-</div>
+</section>
 
 <!-- Banner 👆 -->
 <!-- Movies 👇 -->

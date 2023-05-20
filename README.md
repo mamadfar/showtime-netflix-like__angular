@@ -13,7 +13,7 @@ yarn
 pnpm install
 ```
 3. This app needs an API Key from this [**website** (sign up)](https://www.themoviedb.org/signup), please sign up and use your own API Key. For doing this, you need
-   to change the [.env.example](./.env.example) to `.env` and put you API Key in the `NG_APP_API_KEY`.
+   to change the [.env.example](./.env.example) to `.env` and put your API Key in the `NG_APP_API_KEY`.
 
 
 4. To run the app on development mode, you can use one of the commands below:

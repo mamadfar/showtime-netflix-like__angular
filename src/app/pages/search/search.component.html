@@ -1,1 +1,29 @@
-<p>search works!</p>
+<section class="container mt-5 py-5">
+  <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+    <div class="row">
+      <div class="mb-3 col-lg-10">
+        <input type="search" formControlName="movieName" class="form-control" placeholder="Search Movie Here...">
+      </div>
+      <div class="col-lg-2">
+        <button class="btn btn-md">Search</button>
+      </div>
+    </div>
+  </form>
+  <section class="row mt-5">
+    <article class="col-lg-4" *ngFor="let movie of searchResults">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="my-4">
+            <app-image [id]="movie.id.toString()" [class]="'w-100 cursor-pointer'" [title]="movie.original_title"
+                       [image_url]="movie.poster_path"></app-image>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="my-4">
+            <h5 class="text-white">{{movie.original_title}}</h5>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</section>
