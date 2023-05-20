@@ -1,0 +1,16 @@
+@use "../../../../assets/scss/var";
+
+.navbar .navbar-brand {
+  color: var.$primaryColor;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: var.$primaryColor;
+}
+
+.active {
+  color: #ffffff !important;
+  transition: text-shadow 0.3s;
+  text-shadow: 1px 3px var.$primaryColor;
+}
