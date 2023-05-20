@@ -12,6 +12,7 @@ import { BannerComponent } from './pages/home/components/banner/banner.component
 import { ImageComponent } from './components/image/image.component';
 import {HttpClientModule} from "@angular/common/http";
 import { MoviesComponent } from './pages/home/components/movies/movies.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MoviesComponent } from './pages/home/components/movies/movies.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

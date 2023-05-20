@@ -12,5 +12,10 @@ export class ImageComponent {
   @Input() id?: string = "";
   @Input() class?: string = "";
 
-  image_base_url: string = IMAGE_BASE_URL;
+  image_placeholder: string = "../../../assets/image-placeholder.png";
+
+  ImageUrlResolver(imageUrl: string) {
+    if (imageUrl) return `${IMAGE_BASE_URL}/${imageUrl}`
+    return this.image_placeholder;
+  }
 }

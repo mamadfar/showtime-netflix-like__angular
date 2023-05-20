@@ -1,8 +1,8 @@
 <ng-container *ngIf="id; else withoutId">
-  <img loading="lazy" src="{{image_base_url}}/{{image_url}}" [class]="class"
+  <img loading="lazy" [src]="ImageUrlResolver(image_url)" [class]="class"
        alt="{{title}}" [routerLink]="['/movie', id]">
 </ng-container>
 <ng-template #withoutId>
-  <img loading="lazy" src="{{image_base_url}}/{{image_url}}" [class]="class"
+  <img loading="lazy" [src]="ImageUrlResolver(image_url)" [class]="class"
        alt="{{title}}">
 </ng-template>
