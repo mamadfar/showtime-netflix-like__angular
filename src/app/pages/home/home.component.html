@@ -1,7 +1,7 @@
 <!-- Banner 👇 -->
 
 <section class="container-fluid">
-  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div id="carouselExampleLight" class="carousel carousel-light slide">
     <div class="carousel-inner">
       <article class="carousel-item" data-bs-interval="10000" *ngFor="let banner of banners; let index=index"
            [ngClass]="{active: index===1}">
@@ -9,11 +9,11 @@
                     [overview]="banner.overview"></app-banner>
       </article>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleLight" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleLight" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -24,7 +24,14 @@
 <!-- Movies 👇 -->
 
 <div class="mb-3">
-  <app-movies [section_name]="'Trending Movies'" [movies_list]="trendingMovies"></app-movies>
+  <app-movies [section_name]="'Trending'" [movies_list]="trendingMovies"></app-movies>
+  <app-movies [section_name]="'Action'" [movies_list]="actionMovies"></app-movies>
+  <app-movies [section_name]="'Adventure'" [movies_list]="adventureMovies"></app-movies>
+  <app-movies [section_name]="'Comedy'" [movies_list]="comedyMovies"></app-movies>
+  <app-movies [section_name]="'Thriller'" [movies_list]="thrillerMovies"></app-movies>
+  <app-movies [section_name]="'Animation'" [movies_list]="animationMovies"></app-movies>
+  <app-movies [section_name]="'Science-Fiction'" [movies_list]="scienceFictionMovies"></app-movies>
+  <app-movies [section_name]="'Documentary'" [movies_list]="documentaryMovies"></app-movies>
 </div>
 
 <!-- Movies 👆 -->

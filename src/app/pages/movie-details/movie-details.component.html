@@ -1,1 +1,46 @@
-<p>movie-details works!</p>
+<section class="container-fluid mt-5" *ngIf="!isLoading; else loading">
+  <section class="row p-5" *ngIf="movie; else notFound">
+    <div class="col-lg-2">
+      <app-image [class]="'img-fluid'" [image_url]="movie.poster_path" [title]="movie.original_title"></app-image>
+    </div>
+    <div class="col-lg-10">
+      <div class="mt-5 p-4 text-white">
+        <h1 class="my-2 fw-bold">{{movie.original_title}}</h1>
+        <p class="my-3">{{movie.overview}}</p>
+        <a href="{{trailer_base_url}}?key={{trailer}}" target="_blank"
+           class="btn btn-md watch-btn text-white text-decoration-none">Watch The Trailer</a>
+        <div class="row mt-4 p-4">
+          <h2 class="text-white">Top Cast</h2>
+          <article class="col-lg-4" *ngFor="let cast of MovieCast">
+            <div class="row my-2">
+              <div class="col-lg-2">
+                <div>
+                  <app-image class="img-fluid" [image_url]="cast.profile_path" [title]="cast.original_name"></app-image>
+                </div>
+              </div>
+              <div class="col-lg-10">
+                <div class="text-white">
+                  <h3>{{cast.original_name}}</h3>
+                  <p>{{cast.character}}</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <ng-template #notFound>
+    <section class="text-center pt-5">
+      <h2 class="text-white">Not Found</h2>
+      <button class="btn btn-md text-white border" routerLink="/">Home</button>
+    </section>
+  </ng-template>
+</section>
+<ng-template #loading>
+  <div class="d-flex justify-content-center mt-5">
+    <div class="spinner-border text-light" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</ng-template>
