@@ -4,16 +4,26 @@
 
 | Version            |
 |:-------------------|
+| [`0.5.0`](#v0.5.0) |
 | [`0.4.0`](#v0.4.0) |
 | [`0.3.0`](#v0.3.0) |
 | [`0.2.0`](#v0.2.0) |
 | [`0.1.0`](#v0.1.0) |
 
 
+### <a id="v0.5.0"/>`0.5.0`
+
+- Completed the [`movie details`](./src/app/pages/movie-details) page
+- Added `movieDetailsApi`, `movieTrailerApi`, and `movieCastApi` to get the movie details, trailer, and movie cast to the [`movies service`](./src/app/services/movies.service.ts)
+- Added `MoviesWithGenreApi` to get the movies by genre and show them in the home page to the [`movies service`](./src/app/services/movies.service.ts)
+- Added `favicon` and `title` to the pages
+- Added [`Preview`](./src/assets/showtime-preview.webm) to the [`change-log.md`](./change-log.md)
+
 ### <a id="v0.4.0"/>`0.4.0`
 
 - Added `ReactiveFormsModule` to communicate with the form elements and get the data in a group to the [`app.module.ts`](./src/app/app.module.ts)
 - Completed the [`search`](./src/app/pages/search) page
+- Added `searchMoviesApi` to handle the search with request to the [`movies service`](./src/app/services/movies.service.ts)
 - Changed the [`image`](./src/app/components/image) component to show a placeholder when there is no returned image
 
 ### <a id="v0.3.0"/>`0.3.0`
@@ -27,6 +37,7 @@
 - Added [`image`](./src/app/components/image) component to handle all the images in the app
 - Added [`banner`](./src/app/pages/home/components/banner) component to handle the banner section
 - Added [`movies`](./src/app/pages/home/components/movies) component to handle the list of the movies
+- Added `trendingMoviesApi` and `bannerDataApi` to get the list of movies and the banner for hero section to the [`movies service`](./src/app/services/movies.service.ts)
 - Added the `home`, `search`, and `movie-details` pages to the [app-routing.module.ts](./src/app/app-routing.module.ts)
 - Completed the [`home`](./src/app/pages/home) page
 

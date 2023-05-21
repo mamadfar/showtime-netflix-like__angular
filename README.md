@@ -39,3 +39,5 @@ On Mac OS or Linux, you can use command below to install the exact node version 
 ```shell
 nvm use
 ```
+### 🎬 Preview
+![Showtime Preview](./src/assets/showtime-preview.gif)
