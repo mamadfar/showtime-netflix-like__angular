@@ -1,6 +1,7 @@
 {
   "name": "showtime",
   "version": "0.0.0",
+  "homepage": "https://mamadfar.github.io/showtime-netflix-like__angular/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +11,9 @@
     "dev:ssr": "ng run showtime:serve-ssr",
     "serve:ssr": "node dist/showtime/server/main.js",
     "build:ssr": "ng build && ng run showtime:server",
-    "prerender": "ng run showtime:prerender"
+    "prerender": "ng run showtime:prerender",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +42,7 @@
     "@types/express": "^4.17.0",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^20.2.1",
+    "gh-pages": "^5.0.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

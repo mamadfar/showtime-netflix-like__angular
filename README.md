@@ -41,6 +41,7 @@ If you want to use **Docker** to deploy on **SSR** mode on **VPS**, you can use 
 docker-compose up
 ```
 
+---
 ### 🚩 NVM
 On Mac OS or Linux, you can use command below to install the exact node version which is used to create this app.
 ```shell
